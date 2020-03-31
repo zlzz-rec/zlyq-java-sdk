@@ -6,7 +6,7 @@ import cn.zplatform.appapi.path.Path;
 import cn.zplatform.appapi.service.TransactionServer;
 
 /**
- * placeholder
+ * 支付中心调用实现类
  *
  * @author Lilac
  * 2020-03-31
