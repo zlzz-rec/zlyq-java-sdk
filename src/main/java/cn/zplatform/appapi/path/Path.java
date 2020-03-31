@@ -17,6 +17,9 @@ public class Path {
     // 用户数据迁移api
     public static final String USER_INFO_SYNCHRONIZE = PREFIX + "synchronize/userInfo";
 
+    // 用户历史埋点数据上报
+    public static final String HISTORY_SYNCHRONIZE = "/trace";
+
     /**
      * 判断DOMAIN 是否配置。如果未配置需要根据不同环境进行DOMAIN配置
      *
