@@ -1,12 +1,13 @@
 package cn.zplatform.appapi.service.impl;
 
 import cn.zplatform.appapi.app.AppInfo;
-import cn.zplatform.appapi.app.DefaultAppInfo;
 import cn.zplatform.appapi.bean.transaction.WxAppPostRequest;
 import cn.zplatform.appapi.path.Path;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+@Slf4j
 class TransactionServerImplTest {
     private static WxAppPostRequest payInfo = null;
     private static AppInfo appInfo = null;
@@ -22,23 +23,21 @@ class TransactionServerImplTest {
                 .notifyUrl("https://ykapi.hbagao.com/cb3c/n2eibu/payddd3CenterPayNotify")
                 .build();
 
-        appInfo = DefaultAppInfo.builder()
-                .appId("455906851436167168")
-                .appKey( "a4182367d0f523ef5e6f3a9a931522f1")
-                .appSecret("5eaeb9748a6895c66193f16fb4934fae")
-                .build();
+        appInfo = NotSubmit.appInfo;
 
         Path.DOMAIN = "http://testappapi.zplatform.cn";
     }
 
     @Test
     public void wxUnifiedOrder() {
-        new TransactionServerImpl().wxUnifiedOrder(payInfo, appInfo);
+        String response = new TransactionServerImpl().wxUnifiedOrder(payInfo, appInfo);
+        log.info(response);
     }
 
     @Test
     public void wxOrderQuery() {
-        new TransactionServerImpl().wxOrderQuery(payInfo, appInfo);
+        String response = new TransactionServerImpl().wxOrderQuery(payInfo, appInfo);
+        log.info(response);
     }
 
 
