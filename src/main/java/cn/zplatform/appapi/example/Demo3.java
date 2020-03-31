@@ -110,23 +110,7 @@ public class Demo3 {
             req.setEntity(entity);
         }
 
-        // 处理请求
-
-        try (CloseableHttpClient httpClient = HttpClients.createDefault();
-             CloseableHttpResponse response = httpClient.execute(req)) {
-
-            // Get HttpResponse Status
-            log.debug("ProtocolVersion :[{}] StatusCode :[{}] ReasonPhrase :[{}]", response.getProtocolVersion(),
-                    response.getStatusLine().getStatusCode(), response.getStatusLine().getReasonPhrase());
-
-            HttpEntity entity = response.getEntity();
-            if (entity != null) {
-                // return it as a String
-                String result = EntityUtils.toString(entity);
-                log.debug("result :[{}]", result);
-            }
-
-        }
+        RequestTools.execute(req);
     }
 
 
