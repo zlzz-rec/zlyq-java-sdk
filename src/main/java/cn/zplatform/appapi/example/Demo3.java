@@ -12,11 +12,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.HttpEntity;
-import org.apache.http.HttpHeaders;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.ByteArrayEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -31,7 +29,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 使用 httpclient 写一个测试
+ * 使用 httpclient 写一个测试 post 测试发起支付
  *
  * @author Lilac
  * 2020-03-30
@@ -91,7 +89,6 @@ public class Demo3 {
 
         url += handlerParamStr(requestParams);
         HttpPost req = new HttpPost(url);
-        req.setEntity(new UrlEncodedFormEntity(handlerParam(requestParams), "UTF-8"));
 
         // handle auth
         req.addHeader("X-Sign" , new Sign(requestParams, appInfo).getHeaderStr());
