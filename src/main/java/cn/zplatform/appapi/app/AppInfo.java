@@ -1,5 +1,11 @@
 package cn.zplatform.appapi.app;
 
+/**
+ * https://developer.zplatform.cn/apply/list 页面 记录 值
+ * ⚠ ️主要用于接口校验 ⚠
+ * @author Lilac
+ * 2020-03-31
+ */
 public interface AppInfo {
 
     /**
