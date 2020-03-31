@@ -15,4 +15,4 @@ tip ： 每次 提交之前进行的处理
 - 查询"" 不要有魔法变量
     -  ```  grep -r "\"" . --include="*.java"  ```
 - 处理 Submit类
-    - cp src/test/java/cn/zplatform/appapi/service/impl/Submit.java  src/test/java/cn/zplatform/appapi/service/impl/NotSubmit.java    
+    - ``` cd src/test/java/cn/zplatform/appapi/service/impl/ && cp Submit.java NotSubmit.java && sed -i "" "s/Submit/NotSubmit/g" NotSubmit.java && cd ../../../../../../../..  ```    
