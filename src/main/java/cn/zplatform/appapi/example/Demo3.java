@@ -105,7 +105,6 @@ public class Demo3 {
 
         // handle body
         if (payInfo != null){
-//            req.addHeader("Content-Type" , "application/json");
             ByteArrayEntity entity = new ByteArrayEntity(JSON.toJSONString(payInfo).getBytes(StandardCharsets.UTF_8));
             entity.setContentType("application/json");
             req.setEntity(entity);
