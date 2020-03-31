@@ -1,7 +1,8 @@
 package cn.zplatform.appapi.service;
 
-import cn.zplatform.appapi.app.AppInfo;
-import cn.zplatform.appapi.bean.user.UserInfoSynchronizeRequest;
+        import cn.zplatform.appapi.app.AppInfo;
+        import cn.zplatform.appapi.bean.user.UserFollowRequest;
+        import cn.zplatform.appapi.bean.user.UserInfoSynchronizeRequest;
 
 /**
  * 用户中心相关服务处理
@@ -19,5 +20,15 @@ public interface UserServer extends AppServer{
      * @return response
      */
     String userInfoSynchronize(UserInfoSynchronizeRequest body, AppInfo appInfo);
+
+
+    /**
+     * 用户关注数据同步
+     * followMap不超过100个key
+     * @param body 请求Body数据
+     * @param appInfo app数据
+     * @return response
+     */
+    String userFollowSynchronize(UserFollowRequest body, AppInfo appInfo);
 
 }

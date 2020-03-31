@@ -11,6 +11,9 @@ public class Path {
     // 微信app端下单api
     public static final String WX_APP_TRANSACTION = PREFIX + "transaction/wx/app";
 
+    // 用户关注数据迁移api
+    public static final String USER_FOLLOW_SYNCHRONIZE = PREFIX + "synchronize/userFollow";
+
     // 用户数据迁移api
     public static final String USER_INFO_SYNCHRONIZE = PREFIX + "synchronize/userInfo";
 
