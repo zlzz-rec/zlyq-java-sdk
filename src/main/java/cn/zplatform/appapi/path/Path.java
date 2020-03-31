@@ -4,16 +4,14 @@ import org.apache.commons.lang3.StringUtils;
 
 public class Path {
 
-    private static String DOMAIN = "";
+    public static String DOMAIN = "";
 
     private static final String PREFIX = "/api/v1/" ;
 
-    public static final String BASE_URL = DOMAIN + PREFIX;
-
-    public static final String WX_APP_TRANSACTION = BASE_URL + "transaction/wx/app";
+    public static final String WX_APP_TRANSACTION = PREFIX + "transaction/wx/app";
 
     public static boolean isDisabledDomain(){
-        return !StringUtils.isEmpty(DOMAIN);
+        return StringUtils.isEmpty(DOMAIN) ;
     }
 
 }

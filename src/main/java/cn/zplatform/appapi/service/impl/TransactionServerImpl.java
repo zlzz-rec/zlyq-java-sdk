@@ -14,12 +14,12 @@ import cn.zplatform.appapi.service.TransactionServer;
 public class TransactionServerImpl extends AbstractAppServerImpl implements TransactionServer {
     @Override
     public String wxUnifiedOrder(WxAppPostRequest body, AppInfo appInfo) {
-        return post(Path.WX_APP_TRANSACTION, null, body, appInfo);
+        return post(Path.DOMAIN + Path.WX_APP_TRANSACTION, null, body, appInfo);
     }
 
     @Override
     public String wxOrderQuery(WxAppPostRequest body, AppInfo appInfo) {
-        return get(Path.WX_APP_TRANSACTION, null, body, appInfo);
+        return get(Path.DOMAIN + Path.WX_APP_TRANSACTION, null, body, appInfo);
     }
 
 }

@@ -2,6 +2,7 @@ package cn.zplatform.appapi.service.impl;
 
 import cn.zplatform.appapi.app.AppInfo;
 import cn.zplatform.appapi.bean.transaction.WxAppPostRequest;
+import cn.zplatform.appapi.path.Path;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -40,6 +41,8 @@ class TransactionServerImplTest {
                 return false;
             }
         };
+
+        Path.DOMAIN = "http://testappapi.zplatform.cn";
     }
 
     @Test
