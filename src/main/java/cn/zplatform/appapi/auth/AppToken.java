@@ -17,7 +17,7 @@ import java.text.SimpleDateFormat;
 public class AppToken implements Auth{
 
     private String appInfoStr;
-    private static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm");
+    private static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 
     public AppToken(AppInfo appInfo){
 
