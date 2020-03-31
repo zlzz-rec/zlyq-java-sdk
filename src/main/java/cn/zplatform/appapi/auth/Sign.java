@@ -22,11 +22,6 @@ public class Sign implements Auth {
 
     public Sign(Map<String, String> params, AppInfo appInfo){
 
-        //TODO ？ 需要这样一个校验吗？
-//        if (!(params instanceof HashMap)){
-//            return;
-//        }
-
         if (params == null || params.size() == 0){
             return;
         }
