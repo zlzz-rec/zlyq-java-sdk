@@ -7,7 +7,7 @@ import cn.zplatform.appapi.path.Path;
 import cn.zplatform.appapi.service.UserServer;
 
 /**
- * 用户中心调用实现类
+ * 用户数据同步
  *
  * @author Lilac
  * 2020-03-31
