@@ -5,6 +5,7 @@ import cn.zplatform.appapi.auth.AppToken;
 import cn.zplatform.appapi.auth.Sign;
 import cn.zplatform.appapi.http.HttpGet;
 import cn.zplatform.appapi.http.RequestBody;
+import cn.zplatform.appapi.path.Path;
 import cn.zplatform.appapi.service.AppServer;
 import cn.zplatform.appapi.util.RequestTools;
 import com.alibaba.fastjson.JSON;
@@ -12,7 +13,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.ByteArrayEntity;
 
-import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
@@ -32,6 +32,10 @@ public abstract class AbstractAppServerImpl implements AppServer {
      * 2020-03-31
      */
     protected String get(String url, Map<String, String> params, RequestBody body, AppInfo appInfo) {
+
+        if (Path.isDisabledDomain()){
+            throw new RuntimeException("Path.Domain 未设置 ，请设置domain后使用");
+        }
 
         if (StringUtils.isEmpty(url)) {
             return "";
@@ -68,6 +72,10 @@ public abstract class AbstractAppServerImpl implements AppServer {
      * 2020-03-31
      */
     protected String post(String url, Map<String, String> params, RequestBody body, AppInfo appInfo) {
+
+        if (Path.isDisabledDomain()){
+            throw new RuntimeException("Path.Domain 未设置 ，请设置domain后使用");
+        }
 
         if (StringUtils.isEmpty(url)) {
             return "";
