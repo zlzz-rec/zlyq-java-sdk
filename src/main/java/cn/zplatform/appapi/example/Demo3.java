@@ -5,6 +5,7 @@ import cn.zplatform.appapi.app.AppInfo;
 import cn.zplatform.appapi.auth.AppToken;
 import cn.zplatform.appapi.auth.Sign;
 import cn.zplatform.appapi.http.RequestBody;
+import cn.zplatform.appapi.util.RequestTools;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.AllArgsConstructor;
@@ -12,20 +13,16 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.HttpEntity;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.ByteArrayEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
-import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -87,7 +84,7 @@ public class Demo3 {
             put("time", System.currentTimeMillis() + "");
         }};
 
-        url += handlerParamStr(requestParams);
+        url += RequestTools.handlerParamStr(requestParams);
         HttpPost req = new HttpPost(url);
 
         // handle auth
@@ -109,7 +106,7 @@ public class Demo3 {
         // handle body
         if (payInfo != null){
 //            req.addHeader("Content-Type" , "application/json");
-            ByteArrayEntity entity = new ByteArrayEntity(JSON.toJSONString(payInfo).getBytes("UTF-8"));
+            ByteArrayEntity entity = new ByteArrayEntity(JSON.toJSONString(payInfo).getBytes(StandardCharsets.UTF_8));
             entity.setContentType("application/json");
             req.setEntity(entity);
         }
@@ -133,22 +130,5 @@ public class Demo3 {
         }
     }
 
-    private static String handlerParamStr(Map<String, String> params) {
 
-        StringBuilder suffix = new StringBuilder();
-
-        for (Map.Entry<String, String > entry: params.entrySet()){
-            suffix.append(suffix.length() == 0 ? "?" : "&").append(entry.getKey()).append("=").append(entry.getValue());
-        }
-
-        return suffix.toString();
-    }
-
-    private static List<NameValuePair> handlerParam(Map<String, String> params) {
-        List<NameValuePair> postParameters = new ArrayList<>();
-        for (Map.Entry<String, String> param : params.entrySet()) {
-            postParameters.add(new BasicNameValuePair(param.getKey(), param.getValue()));
-        }
-        return postParameters;
-    }
 }
