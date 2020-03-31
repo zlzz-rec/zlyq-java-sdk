@@ -96,6 +96,7 @@ public abstract class AbstractAppServerImpl implements AppServer {
         //handle param
         HttpPost req = new HttpPost(url + RequestTools.handlerParamStr(params));
 
+        log.debug("url :[{}]", req.getURI());
         // handle auth
         req.addHeader(Constant.X_SIGN_HEADER, new Sign(params, appInfo).getHeaderStr());
         req.addHeader(Constant.X_APP_TOKEN, new AppToken(appInfo).getHeaderStr());
