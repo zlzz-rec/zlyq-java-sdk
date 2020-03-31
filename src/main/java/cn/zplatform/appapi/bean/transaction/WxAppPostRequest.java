@@ -7,7 +7,8 @@ import lombok.Builder;
 import lombok.Data;
 
 /**
- * 微信下单请求结构体封装
+ * 微信下单请求Body封装
+ * 参见 中台API文档 /pages/viewpage.action?pageId=1442858
  *
  * @author Lilac
  * 2020-03-31
