@@ -23,7 +23,7 @@ import java.util.Map;
  * @author Lilac
  * 2020-03-31
  */
-public abstract class AbstractAppServer implements AppServer {
+public abstract class AbstractAppServerImpl implements AppServer {
 
     /**
      * get方法
@@ -31,7 +31,7 @@ public abstract class AbstractAppServer implements AppServer {
      * @author Lilac
      * 2020-03-31
      */
-    public String get(String url, Map<String, String> params, RequestBody body, AppInfo appInfo) throws IOException {
+    protected String get(String url, Map<String, String> params, RequestBody body, AppInfo appInfo) {
 
         if (StringUtils.isEmpty(url)) {
             return "";
@@ -67,13 +67,13 @@ public abstract class AbstractAppServer implements AppServer {
      * @author Lilac
      * 2020-03-31
      */
-    public String post(String url, Map<String, String> params, RequestBody body, AppInfo appInfo) throws IOException {
+    protected String post(String url, Map<String, String> params, RequestBody body, AppInfo appInfo) {
 
         if (StringUtils.isEmpty(url)) {
             return "";
         }
 
-        if (params == null) {
+        if (params == null || params.size() == 0) {
             params = new HashMap<>();
         }
         params.put("appId", appInfo.getAppId());

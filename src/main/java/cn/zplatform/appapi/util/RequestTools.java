@@ -2,6 +2,7 @@ package cn.zplatform.appapi.util;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.HttpEntity;
+import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpUriRequest;
@@ -32,7 +33,7 @@ public class RequestTools {
         return suffix.toString();
     }
 
-    public static String execute(HttpUriRequest req) throws IOException {
+    public static String execute(HttpUriRequest req) {
         try (CloseableHttpClient httpClient = HttpClients.createDefault();
              CloseableHttpResponse response = httpClient.execute(req)) {
 
@@ -48,6 +49,9 @@ public class RequestTools {
                 return result;
             }
 
+        } catch (IOException e) {
+            log.error("请求出现错误 : " + e.getMessage());
+            e.printStackTrace();
         }
 
         return "";
