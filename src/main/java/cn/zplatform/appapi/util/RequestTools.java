@@ -32,7 +32,7 @@ public class RequestTools {
         return suffix.toString();
     }
 
-    public static void execute(HttpUriRequest req) throws IOException {
+    public static String execute(HttpUriRequest req) throws IOException {
         try (CloseableHttpClient httpClient = HttpClients.createDefault();
              CloseableHttpResponse response = httpClient.execute(req)) {
 
@@ -45,8 +45,11 @@ public class RequestTools {
                 // return it as a String
                 String result = EntityUtils.toString(entity);
                 log.debug("result :[{}]", result);
+                return result;
             }
 
         }
+
+        return "";
     }
 }
