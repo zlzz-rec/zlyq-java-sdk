@@ -63,7 +63,6 @@ public class Demo4 {
 
 
         String url = "http://testappapi.zplatform.cn/api/v1/transaction/wx/app";
-        //TODO appId 和time是默认的 参数 不应该在这里显示传进来
         Map<String, String > requestParams = new HashMap<String, String>(){{
             put("appId", appInfo.getAppId());
             put("time", System.currentTimeMillis() + "");
