@@ -66,6 +66,14 @@
 			<version>${httpcomponent.version}</version>
 		</dependency>
 		<!-- http client 处理 结束-->
+
+		<!-- json 处理-->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.68</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
