@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 @Slf4j
 class TransactionServerImplTest {
     private static WxAppPostRequest payInfo = null;
-    private static AppInfo appInfo = null;
+
 
     @BeforeAll
     public static void init() {
@@ -23,20 +23,18 @@ class TransactionServerImplTest {
                 .notifyUrl("https://ykapi.hbagao.com/cb3c/n2eibu/payddd3CenterPayNotify")
                 .build();
 
-        appInfo = NotSubmit.appInfo;
-
         Path.DOMAIN = "http://testappapi.zplatform.cn";
     }
 
     @Test
     public void wxUnifiedOrder() {
-        String response = new TransactionServerImpl().wxUnifiedOrder(payInfo, appInfo);
+        String response = new TransactionServerImpl().wxUnifiedOrder(payInfo, NotSubmit.appInfo);
         log.info(response);
     }
 
     @Test
     public void wxOrderQuery() {
-        String response = new TransactionServerImpl().wxOrderQuery(payInfo, appInfo);
+        String response = new TransactionServerImpl().wxOrderQuery(payInfo, NotSubmit.appInfo);
         log.info(response);
     }
 
