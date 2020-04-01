@@ -1,0 +1,6 @@
+# Default ignored files
+/workspace.xml
+
+# idea
+zlyq-java-sdk.iml
+.idea
