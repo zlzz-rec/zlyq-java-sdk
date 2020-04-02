@@ -4,12 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>zlyq-java-sdk</artifactId>
-        <groupId>cn.zplatform</groupId>
+        <groupId>com.github.zlzz-rec</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <groupId>cn.zplatform</groupId>
-    <artifactId>appapi</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>sdk</artifactId>
+    <version>0.0.2</version>
     <packaging>jar</packaging>
     <name>appapi</name>
     <description>appapi 接口 sdk java版本</description>
@@ -182,4 +181,17 @@
         <connection>scm:git:https://github.com/zlzz-rec/zlyq-java-sdk.git</connection>
         <developerConnection>scm:git:https://github.com/zlzz-rec/zlyq-java-sdk.git</developerConnection>
     </scm>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <name>OSS Snapshots Repository</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <name>OSS Staging Repository</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
 </project>
