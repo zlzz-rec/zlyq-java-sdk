@@ -2,14 +2,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <artifactId>zlyq-java-sdk</artifactId>
-        <groupId>com.github.zlzz-rec</groupId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
     <artifactId>sdk</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <packaging>jar</packaging>
+    <groupId>com.github.zlzz-rec</groupId>
     <name>appapi</name>
     <description>appapi 接口 sdk java版本</description>
     <url>https://github.com/zlzz-rec/zlyq-java-sdk</url>
