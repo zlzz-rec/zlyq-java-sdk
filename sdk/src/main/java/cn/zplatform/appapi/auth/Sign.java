@@ -39,7 +39,7 @@ public class Sign implements Auth {
         StringBuilder stringBuilder = new StringBuilder(initConfig.getAppSecret());
 
         for (String orderlyKey: keys) {
-            stringBuilder.append("&" + orderlyKey + "=" + params.get(orderlyKey));
+            stringBuilder.append("&").append(orderlyKey).append("=").append(params.get(orderlyKey));
         }
 
         log.debug(" calculable string :[{}]", stringBuilder.toString());
