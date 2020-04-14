@@ -1,6 +1,7 @@
 package cn.zplatform.appapi.service.impl;
 
 import cn.zplatform.appapi.app.InitConfig;
+import cn.zplatform.appapi.bean.media_statistic.CommentSyncRequest;
 import cn.zplatform.appapi.bean.media_statistic.MediaFavoriteSyncRequest;
 import cn.zplatform.appapi.bean.media_statistic.MediaLikeSyncRequest;
 import cn.zplatform.appapi.path.Path;
@@ -22,5 +23,10 @@ public class MediaStatisticServiceImpl extends AbstractAppServiceImpl implements
     @Override
     public String mediaFavoriteSynchronize(MediaFavoriteSyncRequest body, InitConfig initConfig) {
         return post(Path.MEDIA_FAVORITE_SYNCHRONIZE, null, body, initConfig);
+    }
+
+    @Override
+    public String commentSynchronize(CommentSyncRequest body, InitConfig initConfig) {
+        return post(Path.COMMENT_SYNCHRONIZE, null, body, initConfig);
     }
 }

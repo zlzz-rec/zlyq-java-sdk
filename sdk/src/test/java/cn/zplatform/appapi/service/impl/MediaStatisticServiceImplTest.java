@@ -1,9 +1,6 @@
 package cn.zplatform.appapi.service.impl;
 
-import cn.zplatform.appapi.bean.media_statistic.MediaFavorite;
-import cn.zplatform.appapi.bean.media_statistic.MediaFavoriteSyncRequest;
-import cn.zplatform.appapi.bean.media_statistic.MediaLike;
-import cn.zplatform.appapi.bean.media_statistic.MediaLikeSyncRequest;
+import cn.zplatform.appapi.bean.media_statistic.*;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -47,5 +44,19 @@ class MediaStatisticServiceImplTest {
         );
 
     }
+    @Test
+    void commentSynchronize() {
 
+        CommentSyncRequest req = CommentSyncRequest.builder().comments(
+                new ArrayList<Comment>() {{
+                    add(Comment.builder().mediaId("452229862267457536").userId("12345").createdAt(1583241345076L).content("content1").thirdId("22").build());
+                    add(Comment.builder().mediaId("452229862267457536").userId("12345").createdAt(1583241345076L).content("content2").thirdId("22").build());
+                }}
+        ).build();
+        System.out.println(
+
+                new MediaStatisticServiceImpl().commentSynchronize(req, NotSubmit.app)
+        );
+
+    }
 }
