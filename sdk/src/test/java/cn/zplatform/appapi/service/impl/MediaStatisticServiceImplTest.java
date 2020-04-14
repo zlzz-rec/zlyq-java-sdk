@@ -59,4 +59,21 @@ class MediaStatisticServiceImplTest {
         );
 
     }
+    @Test
+    void commentLikeSynchronize() {
+
+        CommentLikeSyncRequest req = CommentLikeSyncRequest.builder().commentLikes(
+                new ArrayList<CommentLike>() {{
+                    add(CommentLike.builder().mediaId("452229862267457536").userId("12345").createdAt(1583241345076L).commentId("452229862267457536").build());
+                    add(CommentLike.builder().mediaId("452229862267457536").userId("12345").createdAt(1583241345075L).commentId("452229862267457537").build());
+                }}
+        ).build();
+        System.out.println(
+
+                new MediaStatisticServiceImpl().commentLikeSynchronize(req, NotSubmit.app)
+        );
+
+    }
+
+
 }
