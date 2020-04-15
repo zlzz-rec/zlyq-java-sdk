@@ -1,6 +1,5 @@
 package cn.zplatform.appapi.bean.media.article;
 
-import cn.zplatform.appapi.bean.media_statistic.CommentLike;
 import cn.zplatform.appapi.http.RequestBody;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

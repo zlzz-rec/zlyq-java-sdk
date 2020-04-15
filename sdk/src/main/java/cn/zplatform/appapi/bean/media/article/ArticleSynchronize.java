@@ -1,8 +1,5 @@
 package cn.zplatform.appapi.bean.media.article;
 
-import cn.zplatform.appapi.bean.media.MediaType;
-import cn.zplatform.appapi.bean.media.OsType;
-import cn.zplatform.appapi.bean.media.Source;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
