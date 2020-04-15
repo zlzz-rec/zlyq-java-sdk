@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * @author Lilac
  * 2020-04-15
  */
-class MediaStatisticServiceImplTest {
+class MediaServiceImplTest {
 
     @Test
     void mediaLikeSynchronize() {
@@ -24,7 +24,7 @@ class MediaStatisticServiceImplTest {
         ).build();
         System.out.println(
 
-                new MediaStatisticServiceImpl().mediaLikeSynchronize(req, NotSubmit.app)
+                new MediaServiceImpl().mediaLikeSynchronize(req, NotSubmit.app)
         );
 
     }
@@ -40,7 +40,7 @@ class MediaStatisticServiceImplTest {
         ).build();
         System.out.println(
 
-                new MediaStatisticServiceImpl().mediaFavoriteSynchronize(req, NotSubmit.app)
+                new MediaServiceImpl().mediaFavoriteSynchronize(req, NotSubmit.app)
         );
 
     }
@@ -55,7 +55,7 @@ class MediaStatisticServiceImplTest {
         ).build();
         System.out.println(
 
-                new MediaStatisticServiceImpl().commentSynchronize(req, NotSubmit.app)
+                new MediaServiceImpl().commentSynchronize(req, NotSubmit.app)
         );
 
     }
@@ -70,7 +70,7 @@ class MediaStatisticServiceImplTest {
         ).build();
         System.out.println(
 
-                new MediaStatisticServiceImpl().commentLikeSynchronize(req, NotSubmit.app)
+                new MediaServiceImpl().commentLikeSynchronize(req, NotSubmit.app)
         );
 
     }

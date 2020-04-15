@@ -12,7 +12,7 @@ import cn.zplatform.appapi.bean.media_statistic.MediaLikeSyncRequest;
  * @author Lilac
  * 2020-04-14
  */
-public interface MediaStatisticService extends AppService {
+public interface MediaService extends AppService {
 
     /**
      *  同步点赞信息
