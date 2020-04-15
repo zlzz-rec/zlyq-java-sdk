@@ -5,11 +5,13 @@ import cn.zplatform.appapi.bean.media.OsType;
 import cn.zplatform.appapi.bean.media.Source;
 import cn.zplatform.appapi.bean.media.article.ArticleSynchronize;
 import cn.zplatform.appapi.bean.media.article.ArticleSynchronizeRequest;
+import cn.zplatform.appapi.bean.media.article.ArticleUploadRequest;
 import cn.zplatform.appapi.bean.media_statistic.*;
 import com.alibaba.fastjson.JSON;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Tip: 返回 mediaId不存在 删除第二条测试数据试试
@@ -97,6 +99,23 @@ class MediaServiceImplTest {
         );
 
     }
+    @Test
+    void uploadArticle() {
 
+        ArticleUploadRequest req = ArticleUploadRequest.builder().coverIds(new ArrayList<>())
+                .galleryIds(new ArrayList<String>(){{add("455522923617492992");}}).
+                        title("title").content("this is content")
+                .os(OsType.OsIos.ordinal())
+                .source(Source.SourceAdminUpload.ordinal())
+                .mediaType(MediaType.MediaTypeArticle.ordinal())
+                .userId("457751121931763712")
+                .h5content("").thirdId("").thirdExtra("thirdExtra").build();
+
+
+        System.out.println(
+                new MediaServiceImpl().uploadArticle(req, NotSubmit.app)
+        );
+
+    }
 
 }

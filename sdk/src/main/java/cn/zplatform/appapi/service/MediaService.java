@@ -2,6 +2,7 @@ package cn.zplatform.appapi.service;
 
 import cn.zplatform.appapi.app.InitConfig;
 import cn.zplatform.appapi.bean.media.article.ArticleSynchronizeRequest;
+import cn.zplatform.appapi.bean.media.article.ArticleUploadRequest;
 import cn.zplatform.appapi.bean.media_statistic.CommentLikeSyncRequest;
 import cn.zplatform.appapi.bean.media_statistic.CommentSyncRequest;
 import cn.zplatform.appapi.bean.media_statistic.MediaFavoriteSyncRequest;
@@ -54,5 +55,12 @@ public interface MediaService extends AppService {
      */
     String articleSynchronize(ArticleSynchronizeRequest body, InitConfig initConfig);
 
+    /**
+     *  上传图文
+     * @param body 请求Body数据
+     * @param initConfig app数据
+     * @return response
+     */
+    String uploadArticle(ArticleUploadRequest body, InitConfig initConfig);
 
 }
