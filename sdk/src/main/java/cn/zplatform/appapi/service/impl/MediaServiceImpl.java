@@ -1,6 +1,7 @@
 package cn.zplatform.appapi.service.impl;
 
 import cn.zplatform.appapi.app.InitConfig;
+import cn.zplatform.appapi.bean.media.article.ArticleSynchronizeRequest;
 import cn.zplatform.appapi.bean.media_statistic.CommentLikeSyncRequest;
 import cn.zplatform.appapi.bean.media_statistic.CommentSyncRequest;
 import cn.zplatform.appapi.bean.media_statistic.MediaFavoriteSyncRequest;
@@ -35,4 +36,10 @@ public class MediaServiceImpl extends AbstractAppServiceImpl implements MediaSer
     public String commentLikeSynchronize(CommentLikeSyncRequest body, InitConfig initConfig) {
         return post(Path.COMMENT_LIKE_SYNCHRONIZE, null, body, initConfig);
     }
+
+    @Override
+    public String articleSynchronize(ArticleSynchronizeRequest body, InitConfig initConfig) {
+        return post(Path.ARTICLE_SYNCHRONIZE, null, body, initConfig);
+    }
+
 }

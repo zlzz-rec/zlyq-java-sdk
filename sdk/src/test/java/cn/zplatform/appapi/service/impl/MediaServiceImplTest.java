@@ -1,6 +1,12 @@
 package cn.zplatform.appapi.service.impl;
 
+import cn.zplatform.appapi.bean.media.MediaType;
+import cn.zplatform.appapi.bean.media.OsType;
+import cn.zplatform.appapi.bean.media.Source;
+import cn.zplatform.appapi.bean.media.article.ArticleSynchronize;
+import cn.zplatform.appapi.bean.media.article.ArticleSynchronizeRequest;
 import cn.zplatform.appapi.bean.media_statistic.*;
+import com.alibaba.fastjson.JSON;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -71,6 +77,23 @@ class MediaServiceImplTest {
         System.out.println(
 
                 new MediaServiceImpl().commentLikeSynchronize(req, NotSubmit.app)
+        );
+
+    }
+    @Test
+    void articleSynchronize() {
+
+        ArticleSynchronizeRequest req = ArticleSynchronizeRequest.builder().articles(
+                new ArrayList<ArticleSynchronize>() {{
+                    add(ArticleSynchronize.builder().title("this is title").userId("23456789").content("this is content").h5content("org")
+                            .os(OsType.OsIos.ordinal()).deviceId("").ip("192.168.0.0").longitude(122.2).latitude(67.6).source(Source.SourceAdminUpload.ordinal())
+                            .thirdId("6789").thirdExtra("thirdExtra").createdAt(1583241345076L).mediaType(MediaType.MediaTypeGallery.ordinal()).build());
+                }}
+        ).build();
+
+        System.out.println(
+
+                new MediaServiceImpl().articleSynchronize(req, NotSubmit.app)
         );
 
     }
