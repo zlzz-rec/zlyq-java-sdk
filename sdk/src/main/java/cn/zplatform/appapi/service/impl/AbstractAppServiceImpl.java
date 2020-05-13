@@ -13,7 +13,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.ByteArrayEntity;
+import org.apache.http.entity.mime.MultipartEntity;
+import org.apache.http.entity.mime.content.FileBody;
 
+import java.io.File;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
@@ -111,5 +114,53 @@ public abstract class AbstractAppServiceImpl implements AppService {
         return RequestTools.execute(req);
     }
 
+    /**
+     * post方法
+     *
+     * @author Lilac
+     * 2020-03-31
+     */
+    protected String postWithFile(String url, Map<String, String> params, RequestBody body, InitConfig initConfig, File file) {
+
+        log.debug("initConfig.isDisabledDomain() :[{}]", initConfig.isDisabledDomain());
+        if (initConfig.isDisabledDomain()){
+            throw new RuntimeException("Path.Domain 未设置 ，请设置domain后使用");
+        }
+
+        if (StringUtils.isEmpty(url)) {
+            return "";
+        }
+
+        if (params == null || params.size() == 0) {
+            params = new HashMap<>();
+        }
+        params.put(Constant.APPID, initConfig.getAppId());
+        params.put(Constant.TIME, System.currentTimeMillis() + "");
+
+
+        //handle param
+        HttpPost req = new HttpPost(initConfig.getDomain() + url + RequestTools.handlerParamStr(params));
+
+
+        log.debug("url :[{}]", req.getURI());
+        // handle auth
+        req.addHeader(Constant.X_SIGN_HEADER, new Sign(params, initConfig).getHeaderStr());
+        req.addHeader(Constant.X_APP_TOKEN, new AppToken(initConfig).getHeaderStr());
+
+        // handle body
+
+        FileBody fileBody = new FileBody(file);
+        MultipartEntity reqEntity = new MultipartEntity();
+        reqEntity.addPart("image", fileBody);
+
+        if (body != null) {
+            ByteArrayEntity entity = new ByteArrayEntity(JSON.toJSONString(body).getBytes(StandardCharsets.UTF_8));
+            entity.setContentType(Constant.JSON_CONTENT_TYPE);
+            req.setEntity(entity);
+        }
+
+        // 处理请求
+        return RequestTools.execute(req);
+    }
 
 }
