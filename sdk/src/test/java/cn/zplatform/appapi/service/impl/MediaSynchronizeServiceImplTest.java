@@ -97,23 +97,6 @@ class MediaSynchronizeServiceImplTest {
         );
 
     }
-    @Test
-    void uploadArticle() {
 
-        ArticleUploadRawBody req = ArticleUploadRawBody.builder().coverIds(new ArrayList<>())
-                .galleryIds(new ArrayList<String>(){{add("455522923617492992");}}).
-                        title("title").content("this is content")
-                .os(OsType.OsIos.ordinal())
-                .source(Source.SourceAdminUpload.ordinal())
-                .mediaType(MediaType.MediaTypeArticle.ordinal())
-                .userId("457751121931763712")
-                .h5content("").thirdId("").thirdExtra("thirdExtra").build();
-
-
-        System.out.println(
-                new MediaSynchronizeServiceImpl().uploadArticle(req, NotSubmit.app)
-        );
-
-    }
 
 }

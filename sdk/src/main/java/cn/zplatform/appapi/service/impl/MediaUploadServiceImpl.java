@@ -3,6 +3,7 @@ package cn.zplatform.appapi.service.impl;
 import cn.zplatform.appapi.app.InitConfig;
 import cn.zplatform.appapi.bean.image.ImageUploadFormDataBody;
 import cn.zplatform.appapi.bean.media.article.ArticleUploadRawBody;
+import cn.zplatform.appapi.bean.video.VideoFormDataBody;
 import cn.zplatform.appapi.path.Path;
 import cn.zplatform.appapi.service.MediaUploadService;
 
@@ -23,4 +24,10 @@ public class MediaUploadServiceImpl extends AbstractAppServiceImpl implements Me
     public String uploadArticle(ArticleUploadRawBody body, InitConfig initConfig) {
         return post(Path.ARTICLE_UPLOAD_SYNCHRONIZE, null, body, initConfig);
     }
+
+    @Override
+    public String uploadVideo(VideoFormDataBody body, InitConfig initConfig) {
+        return post(Path.VIDEO_UPLOAD_SYNCHRONIZE, null, body, initConfig);
+    }
+
 }
