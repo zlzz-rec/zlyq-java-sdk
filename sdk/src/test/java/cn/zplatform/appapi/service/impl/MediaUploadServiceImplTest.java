@@ -1,17 +1,15 @@
 package cn.zplatform.appapi.service.impl;
 
-import cn.zplatform.appapi.bean.image.ImageUploadFormDataBody;
+import cn.zplatform.appapi.bean.media.image.ImageUploadFormDataBody;
 import cn.zplatform.appapi.bean.media.MediaType;
 import cn.zplatform.appapi.bean.media.OsType;
 import cn.zplatform.appapi.bean.media.Source;
 import cn.zplatform.appapi.bean.media.article.ArticleUploadRawBody;
-import cn.zplatform.appapi.bean.video.VideoFormDataBody;
+import cn.zplatform.appapi.bean.media.video.VideoFormDataBody;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.util.ArrayList;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class MediaUploadServiceImplTest {
 

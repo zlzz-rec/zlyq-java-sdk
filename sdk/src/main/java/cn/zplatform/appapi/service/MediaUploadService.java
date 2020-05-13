@@ -1,9 +1,9 @@
 package cn.zplatform.appapi.service;
 
 import cn.zplatform.appapi.app.InitConfig;
-import cn.zplatform.appapi.bean.image.ImageUploadFormDataBody;
+import cn.zplatform.appapi.bean.media.image.ImageUploadFormDataBody;
 import cn.zplatform.appapi.bean.media.article.ArticleUploadRawBody;
-import cn.zplatform.appapi.bean.video.VideoFormDataBody;
+import cn.zplatform.appapi.bean.media.video.VideoFormDataBody;
 
 /**
  * 图片数据同步

@@ -1,4 +1,4 @@
-package cn.zplatform.appapi.bean.image;
+package cn.zplatform.appapi.bean.media.image;
 
 import cn.zplatform.appapi.http.FormDataBody;
 import lombok.AllArgsConstructor;

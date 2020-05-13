@@ -1,9 +1,9 @@
 package cn.zplatform.appapi.service.impl;
 
 import cn.zplatform.appapi.app.InitConfig;
-import cn.zplatform.appapi.bean.image.ImageUploadFormDataBody;
+import cn.zplatform.appapi.bean.media.image.ImageUploadFormDataBody;
 import cn.zplatform.appapi.bean.media.article.ArticleUploadRawBody;
-import cn.zplatform.appapi.bean.video.VideoFormDataBody;
+import cn.zplatform.appapi.bean.media.video.VideoFormDataBody;
 import cn.zplatform.appapi.path.Path;
 import cn.zplatform.appapi.service.MediaUploadService;
 

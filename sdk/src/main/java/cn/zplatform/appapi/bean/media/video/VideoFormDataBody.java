@@ -1,4 +1,4 @@
-package cn.zplatform.appapi.bean.video;
+package cn.zplatform.appapi.bean.media.video;
 
 import cn.zplatform.appapi.http.FormDataBody;
 import lombok.AllArgsConstructor;
