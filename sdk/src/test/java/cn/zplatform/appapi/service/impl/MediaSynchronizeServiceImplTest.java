@@ -1,5 +1,6 @@
 package cn.zplatform.appapi.service.impl;
 
+import cn.zplatform.appapi.app.InitConfig;
 import cn.zplatform.appapi.bean.media.MediaType;
 import cn.zplatform.appapi.bean.media.OsType;
 import cn.zplatform.appapi.bean.media.Source;
@@ -7,6 +8,7 @@ import cn.zplatform.appapi.bean.media.article.ArticleSynchronize;
 import cn.zplatform.appapi.bean.media.article.ArticleSynchronizeRawBody;
 import cn.zplatform.appapi.bean.media.article.ArticleUploadRawBody;
 import cn.zplatform.appapi.bean.media_statistic.*;
+import cn.zplatform.appapi.path.Path;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -97,6 +99,25 @@ class MediaSynchronizeServiceImplTest {
         );
 
     }
+    @Test
+    void videoSynchronize() {
+        VideoSyncRawBody body = VideoSyncRawBody.builder().videos(
+                new ArrayList<Video>(){{
+                    add(Video.builder().userId("23456789").title("this is title")
+                            .uploadType(0).orgFileName("ogr").os(0)
+                            .deviceId("").ip("192.168.0.0").longitude(122F)
+                            .latitude(67F).source(0).thirdId("1234")
+                            .thirdExtra("").createdAt(1583241345076L).build());
+
+                }}
+        ).build();
+        System.out.println(
+
+                new MediaSynchronizeServiceImpl().videoSynchronize(body, NotSubmit.app)
+        );
+
+    }
+
 
 
 }

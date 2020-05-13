@@ -41,4 +41,9 @@ public class MediaSynchronizeServiceImpl extends AbstractAppServiceImpl implemen
         return post(Path.ARTICLE_SYNCHRONIZE, null, body, initConfig);
     }
 
+    @Override
+    public String videoSynchronize(VideoSyncRawBody body, InitConfig initConfig) {
+        return post(Path.VIDEO_SYNCHRONIZE, null, body, initConfig);
+    }
+
 }

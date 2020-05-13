@@ -2,10 +2,7 @@ package cn.zplatform.appapi.service;
 
 import cn.zplatform.appapi.app.InitConfig;
 import cn.zplatform.appapi.bean.media.article.ArticleSynchronizeRawBody;
-import cn.zplatform.appapi.bean.media_statistic.CommentLikeSyncRawBody;
-import cn.zplatform.appapi.bean.media_statistic.CommentSyncRawBody;
-import cn.zplatform.appapi.bean.media_statistic.MediaFavoriteSyncRawBody;
-import cn.zplatform.appapi.bean.media_statistic.MediaLikeSyncRawBody;
+import cn.zplatform.appapi.bean.media_statistic.*;
 
 /**
  * 媒资数据同步
@@ -53,5 +50,13 @@ public interface MediaSynchronizeService extends AppService {
      * @return response
      */
     String articleSynchronize(ArticleSynchronizeRawBody body, InitConfig initConfig);
+
+    /**
+     *  同步视频信息
+     * @param body 请求Body数据
+     * @param initConfig app数据
+     * @return response
+     */
+    String videoSynchronize(VideoSyncRawBody body, InitConfig initConfig);
 
 }
