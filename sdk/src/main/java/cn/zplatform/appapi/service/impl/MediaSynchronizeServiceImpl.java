@@ -7,7 +7,7 @@ import cn.zplatform.appapi.bean.media_statistic.*;
 import cn.zplatform.appapi.bean.media_statistic.CommentLikeSyncRawBody;
 import cn.zplatform.appapi.bean.media_statistic.CommentSyncRawv;
 import cn.zplatform.appapi.path.Path;
-import cn.zplatform.appapi.service.MediaService;
+import cn.zplatform.appapi.service.MediaSynchronizeService;
 
 /**
  * 用户埋点数据实现
@@ -15,7 +15,7 @@ import cn.zplatform.appapi.service.MediaService;
  * @author Lilac
  * 2020-03-31
  */
-public class MediaServiceImpl extends AbstractAppServiceImpl implements MediaService {
+public class MediaSynchronizeServiceImpl extends AbstractAppServiceImpl implements MediaSynchronizeService {
 
     @Override
     public String mediaLikeSynchronize(MediaLikeSyncRawBody body, InitConfig initConfig) {

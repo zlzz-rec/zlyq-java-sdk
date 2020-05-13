@@ -17,7 +17,7 @@ import java.util.ArrayList;
  * @author Lilac
  * 2020-04-15
  */
-class MediaServiceImplTest {
+class MediaSynchronizeServiceImplTest {
 
     @Test
     void mediaLikeSynchronize() {
@@ -30,7 +30,7 @@ class MediaServiceImplTest {
         ).build();
         System.out.println(
 
-                new MediaServiceImpl().mediaLikeSynchronize(req, NotSubmit.app)
+                new MediaSynchronizeServiceImpl().mediaLikeSynchronize(req, NotSubmit.app)
         );
 
     }
@@ -46,7 +46,7 @@ class MediaServiceImplTest {
         ).build();
         System.out.println(
 
-                new MediaServiceImpl().mediaFavoriteSynchronize(req, NotSubmit.app)
+                new MediaSynchronizeServiceImpl().mediaFavoriteSynchronize(req, NotSubmit.app)
         );
 
     }
@@ -61,7 +61,7 @@ class MediaServiceImplTest {
         ).build();
         System.out.println(
 
-                new MediaServiceImpl().commentSynchronize(req, NotSubmit.app)
+                new MediaSynchronizeServiceImpl().commentSynchronize(req, NotSubmit.app)
         );
 
     }
@@ -76,7 +76,7 @@ class MediaServiceImplTest {
         ).build();
         System.out.println(
 
-                new MediaServiceImpl().commentLikeSynchronize(req, NotSubmit.app)
+                new MediaSynchronizeServiceImpl().commentLikeSynchronize(req, NotSubmit.app)
         );
 
     }
@@ -93,7 +93,7 @@ class MediaServiceImplTest {
 
         System.out.println(
 
-                new MediaServiceImpl().articleSynchronize(req, NotSubmit.app)
+                new MediaSynchronizeServiceImpl().articleSynchronize(req, NotSubmit.app)
         );
 
     }
@@ -111,7 +111,7 @@ class MediaServiceImplTest {
 
 
         System.out.println(
-                new MediaServiceImpl().uploadArticle(req, NotSubmit.app)
+                new MediaSynchronizeServiceImpl().uploadArticle(req, NotSubmit.app)
         );
 
     }
