@@ -8,7 +8,7 @@ import lombok.Data;
 import java.io.File;
 
 /**
- * 上传图片
+ * 上传视频
  *
  * @author Lilac
  * 2020-04-15
