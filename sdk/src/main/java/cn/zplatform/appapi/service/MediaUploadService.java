@@ -26,4 +26,12 @@ public interface MediaUploadService extends AppService {
     String uploadImage(ImageUploadFormDataBody body, InitConfig initConfig);
 
 
+    /**
+     *  上传图文
+     * @param body 请求Body数据
+     * @param initConfig app数据
+     * @return response
+     */
+    String uploadArticle(ArticleUploadRawBody body, InitConfig initConfig);
+
 }

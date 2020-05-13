@@ -42,8 +42,4 @@ public class MediaSynchronizeServiceImpl extends AbstractAppServiceImpl implemen
         return post(Path.ARTICLE_SYNCHRONIZE, null, body, initConfig);
     }
 
-    @Override
-    public String uploadArticle(ArticleUploadRawBody body, InitConfig initConfig) {
-        return post(Path.ARTICLE_UPLOAD_SYNCHRONIZE, null, body, initConfig);
-    }
 }

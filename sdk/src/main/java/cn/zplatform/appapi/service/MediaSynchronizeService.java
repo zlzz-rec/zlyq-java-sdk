@@ -55,12 +55,4 @@ public interface MediaSynchronizeService extends AppService {
      */
     String articleSynchronize(ArticleSynchronizeRawBody body, InitConfig initConfig);
 
-    /**
-     *  上传图文
-     * @param body 请求Body数据
-     * @param initConfig app数据
-     * @return response
-     */
-    String uploadArticle(ArticleUploadRawBody body, InitConfig initConfig);
-
 }
