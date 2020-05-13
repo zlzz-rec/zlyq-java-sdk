@@ -53,7 +53,7 @@ class MediaSynchronizeServiceImplTest {
     @Test
     void commentSynchronize() {
 
-        CommentSyncRawv req = CommentSyncRawv.builder().comments(
+        CommentSyncRawBody req = CommentSyncRawBody.builder().comments(
                 new ArrayList<Comment>() {{
                     add(Comment.builder().mediaId("452229862267457536").userId("12345").createdAt(1583241345076L).content("content1").thirdId("22").build());
                     add(Comment.builder().mediaId("452229862267457536").userId("12345").createdAt(1583241345076L).content("content2").thirdId("22").build());

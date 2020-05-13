@@ -18,6 +18,6 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @Data
-public class CommentSyncRawv implements RawBody {
+public class CommentSyncRawBody implements RawBody {
     List<Comment> comments;
 }

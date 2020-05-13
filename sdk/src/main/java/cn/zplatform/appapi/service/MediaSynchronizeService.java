@@ -2,9 +2,8 @@ package cn.zplatform.appapi.service;
 
 import cn.zplatform.appapi.app.InitConfig;
 import cn.zplatform.appapi.bean.media.article.ArticleSynchronizeRawBody;
-import cn.zplatform.appapi.bean.media.article.ArticleUploadRawBody;
 import cn.zplatform.appapi.bean.media_statistic.CommentLikeSyncRawBody;
-import cn.zplatform.appapi.bean.media_statistic.CommentSyncRawv;
+import cn.zplatform.appapi.bean.media_statistic.CommentSyncRawBody;
 import cn.zplatform.appapi.bean.media_statistic.MediaFavoriteSyncRawBody;
 import cn.zplatform.appapi.bean.media_statistic.MediaLikeSyncRawBody;
 
@@ -38,7 +37,7 @@ public interface MediaSynchronizeService extends AppService {
      * @param initConfig app数据
      * @return response
      */
-    String commentSynchronize(CommentSyncRawv body, InitConfig initConfig);
+    String commentSynchronize(CommentSyncRawBody body, InitConfig initConfig);
     /**
      *  同步评论点赞信息
      * @param body 请求Body数据

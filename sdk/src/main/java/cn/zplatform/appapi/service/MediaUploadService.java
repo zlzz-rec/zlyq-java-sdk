@@ -2,12 +2,7 @@ package cn.zplatform.appapi.service;
 
 import cn.zplatform.appapi.app.InitConfig;
 import cn.zplatform.appapi.bean.image.ImageUploadFormDataBody;
-import cn.zplatform.appapi.bean.media.article.ArticleSynchronizeRawBody;
 import cn.zplatform.appapi.bean.media.article.ArticleUploadRawBody;
-import cn.zplatform.appapi.bean.media_statistic.CommentLikeSyncRawBody;
-import cn.zplatform.appapi.bean.media_statistic.CommentSyncRawv;
-import cn.zplatform.appapi.bean.media_statistic.MediaFavoriteSyncRawBody;
-import cn.zplatform.appapi.bean.media_statistic.MediaLikeSyncRawBody;
 
 /**
  * 图片数据同步

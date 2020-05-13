@@ -2,10 +2,9 @@ package cn.zplatform.appapi.service.impl;
 
 import cn.zplatform.appapi.app.InitConfig;
 import cn.zplatform.appapi.bean.media.article.ArticleSynchronizeRawBody;
-import cn.zplatform.appapi.bean.media.article.ArticleUploadRawBody;
 import cn.zplatform.appapi.bean.media_statistic.*;
 import cn.zplatform.appapi.bean.media_statistic.CommentLikeSyncRawBody;
-import cn.zplatform.appapi.bean.media_statistic.CommentSyncRawv;
+import cn.zplatform.appapi.bean.media_statistic.CommentSyncRawBody;
 import cn.zplatform.appapi.path.Path;
 import cn.zplatform.appapi.service.MediaSynchronizeService;
 
@@ -28,7 +27,7 @@ public class MediaSynchronizeServiceImpl extends AbstractAppServiceImpl implemen
     }
 
     @Override
-    public String commentSynchronize(CommentSyncRawv body, InitConfig initConfig) {
+    public String commentSynchronize(CommentSyncRawBody body, InitConfig initConfig) {
         return post(Path.COMMENT_SYNCHRONIZE, null, body, initConfig);
     }
 
