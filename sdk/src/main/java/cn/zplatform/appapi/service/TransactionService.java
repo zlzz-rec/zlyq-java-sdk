@@ -1,7 +1,7 @@
 package cn.zplatform.appapi.service;
 
 import cn.zplatform.appapi.app.InitConfig;
-import cn.zplatform.appapi.bean.transaction.WxAppPostRequest;
+import cn.zplatform.appapi.bean.transaction.WxAppPostRawBody;
 
 /**
  * 支付中心相关服务处理
@@ -17,7 +17,7 @@ public interface TransactionService extends AppService {
      * @param initConfig app数据
      * @return response
      */
-    String wxUnifiedOrder(WxAppPostRequest body, InitConfig initConfig);
+    String wxUnifiedOrder(WxAppPostRawBody body, InitConfig initConfig);
 
     /**
      * 查询微信下单结果请求
@@ -25,5 +25,5 @@ public interface TransactionService extends AppService {
      * @param initConfig app数据
      * @return response
      */
-    String wxOrderQuery(WxAppPostRequest body, InitConfig initConfig);
+    String wxOrderQuery(WxAppPostRawBody body, InitConfig initConfig);
 }

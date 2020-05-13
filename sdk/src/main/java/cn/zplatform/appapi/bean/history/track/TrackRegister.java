@@ -1,7 +1,6 @@
 package cn.zplatform.appapi.bean.history.track;
 
 import cn.zplatform.appapi.bean.history.EventCommon;
-import cn.zplatform.appapi.http.RequestBody;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

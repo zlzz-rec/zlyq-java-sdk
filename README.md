@@ -22,7 +22,7 @@ package cn.zplatform.appapi.service.impl;
 
 import cn.zplatform.appapi.app.DefaultInitConfig;
 import cn.zplatform.appapi.app.InitConfig;
-import cn.zplatform.appapi.bean.user.UserInfoSynchronizeRequest;
+import cn.zplatform.appapi.bean.user.UserInfoSynchronizeRawBody;
 
 public class UserInfoSynchronizeDemo {
 

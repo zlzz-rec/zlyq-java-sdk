@@ -1,6 +1,6 @@
 package cn.zplatform.appapi.bean.user;
 
-import cn.zplatform.appapi.http.RequestBody;
+import cn.zplatform.appapi.http.RawBody;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -19,7 +19,7 @@ import java.util.Map;
 @AllArgsConstructor
 @Data
 
-public class UserFollowRequest implements RequestBody {
+public class UserFollowRawBody implements RawBody {
     String userId;
     Map<String, Long> followMap;
 }

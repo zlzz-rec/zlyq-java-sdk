@@ -1,6 +1,6 @@
 package cn.zplatform.appapi.bean.history;
 
-import cn.zplatform.appapi.http.RequestBody;
+import cn.zplatform.appapi.http.RawBody;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,7 +16,7 @@ import java.util.List;
 @Data
 @Builder
 @AllArgsConstructor
-public class TrackInfo implements RequestBody {
+public class TrackInfo implements RawBody {
 
     private TrackCommon common;
     private List<EventCommon> properties;

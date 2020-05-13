@@ -1,8 +1,8 @@
 package cn.zplatform.appapi.service.impl;
 
 import cn.zplatform.appapi.app.InitConfig;
-import cn.zplatform.appapi.bean.user.UserFollowRequest;
-import cn.zplatform.appapi.bean.user.UserInfoSynchronizeRequest;
+import cn.zplatform.appapi.bean.user.UserFollowRawBody;
+import cn.zplatform.appapi.bean.user.UserInfoSynchronizeRawBody;
 import cn.zplatform.appapi.path.Path;
 import cn.zplatform.appapi.service.UserService;
 
@@ -15,12 +15,12 @@ import cn.zplatform.appapi.service.UserService;
 public class UserServiceImpl extends AbstractAppServiceImpl implements UserService {
 
     @Override
-    public String userInfoSynchronize(UserInfoSynchronizeRequest body, InitConfig initConfig) {
+    public String userInfoSynchronize(UserInfoSynchronizeRawBody body, InitConfig initConfig) {
         return post(Path.USER_INFO_SYNCHRONIZE, null, body, initConfig) ;
     }
 
     @Override
-    public String userFollowSynchronize(UserFollowRequest body, InitConfig initConfig) {
+    public String userFollowSynchronize(UserFollowRawBody body, InitConfig initConfig) {
         return post(Path.USER_FOLLOW_SYNCHRONIZE, null, body, initConfig);
     }
 }
