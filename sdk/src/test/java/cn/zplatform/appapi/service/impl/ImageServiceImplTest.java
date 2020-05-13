@@ -16,7 +16,7 @@ class ImageServiceImplTest {
     void uploadImage() {
 
         ImageUploadFormDataBody body = ImageUploadFormDataBody.builder()
-                .image(new File("/Users/lilac/workspace/company/zlyq-java-sdk/sdk/src/main/java/cn/zplatform/appapi/service/impl/MediaServiceImpl.java"))
+                .image(new File("/Users/lilac/Downloads/ef03de0563df8e573cb6b5f9ada4ff54_1440w.jpg"))
                 .description("description")
                 .userId("464509908264796160")
                 .source(0)
