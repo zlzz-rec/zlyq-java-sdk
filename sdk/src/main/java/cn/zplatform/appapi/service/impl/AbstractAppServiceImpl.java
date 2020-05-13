@@ -3,6 +3,7 @@ package cn.zplatform.appapi.service.impl;
 import cn.zplatform.appapi.app.InitConfig;
 import cn.zplatform.appapi.auth.AppToken;
 import cn.zplatform.appapi.auth.Sign;
+import cn.zplatform.appapi.http.FormDataBody;
 import cn.zplatform.appapi.http.HttpGet;
 import cn.zplatform.appapi.http.RawBody;
 import cn.zplatform.appapi.service.AppService;
@@ -13,8 +14,11 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.ByteArrayEntity;
+import org.apache.http.entity.ContentType;
 import org.apache.http.entity.mime.MultipartEntity;
+import org.apache.http.entity.mime.MultipartEntityBuilder;
 import org.apache.http.entity.mime.content.FileBody;
+import org.apache.http.entity.mime.content.StringBody;
 
 import java.io.File;
 import java.nio.charset.StandardCharsets;
@@ -120,7 +124,7 @@ public abstract class AbstractAppServiceImpl implements AppService {
      * @author Lilac
      * 2020-03-31
      */
-    protected String postWithFile(String url, Map<String, String> params, RequestBody body, InitConfig initConfig, File file) {
+    protected String post(String url, Map<String, String> params, FormDataBody body, InitConfig initConfig) {
 
         log.debug("initConfig.isDisabledDomain() :[{}]", initConfig.isDisabledDomain());
         if (initConfig.isDisabledDomain()){
@@ -147,17 +151,12 @@ public abstract class AbstractAppServiceImpl implements AppService {
         req.addHeader(Constant.X_SIGN_HEADER, new Sign(params, initConfig).getHeaderStr());
         req.addHeader(Constant.X_APP_TOKEN, new AppToken(initConfig).getHeaderStr());
 
+        // 通过反射获取file和 key value
         // handle body
+        File file = new File("/Users/lilac/Downloads/ef03de0563df8e573cb6b5f9ada4ff54_1440w.jpg");
+        MultipartEntityBuilder builder = MultipartEntityBuilder.create().addBinaryBody("image", file);
 
-        FileBody fileBody = new FileBody(file);
-        MultipartEntity reqEntity = new MultipartEntity();
-        reqEntity.addPart("image", fileBody);
-
-        if (body != null) {
-            ByteArrayEntity entity = new ByteArrayEntity(JSON.toJSONString(body).getBytes(StandardCharsets.UTF_8));
-            entity.setContentType(Constant.JSON_CONTENT_TYPE);
-            req.setEntity(entity);
-        }
+        req.setEntity(builder.build());
 
         // 处理请求
         return RequestTools.execute(req);
