@@ -15,7 +15,7 @@ import cn.zplatform.appapi.bean.media_statistic.MediaLikeSyncRawBody;
  * @author Lilac
  * 2020-04-14
  */
-public interface ImageService extends AppService {
+public interface MediaUploadService extends AppService {
 
     /**
      *  上传图片

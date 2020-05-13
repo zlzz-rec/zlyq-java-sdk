@@ -1,14 +1,9 @@
 package cn.zplatform.appapi.service.impl;
 
 import cn.zplatform.appapi.bean.image.ImageUploadFormDataBody;
-import cn.zplatform.appapi.bean.media_statistic.MediaLike;
-import cn.zplatform.appapi.bean.media_statistic.MediaLikeSyncRawBody;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
-import java.util.ArrayList;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class ImageServiceImplTest {
 
@@ -24,7 +19,7 @@ class ImageServiceImplTest {
                 .thirdExtra("").build();
 
         System.out.println(
-                new ImageServiceImpl().uploadImage(body, NotSubmit.app)
+                new MediaUploadServiceImpl().uploadImage(body, NotSubmit.app)
         );
     }
 }
