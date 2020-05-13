@@ -1,8 +1,8 @@
 package cn.zplatform.appapi.service;
 
         import cn.zplatform.appapi.app.InitConfig;
-        import cn.zplatform.appapi.bean.user.UserFollowRequest;
-        import cn.zplatform.appapi.bean.user.UserInfoSynchronizeRequest;
+        import cn.zplatform.appapi.bean.user.UserFollowRawBody;
+        import cn.zplatform.appapi.bean.user.UserInfoSynchronizeRawBody;
 
 /**
  * 用户中心相关服务处理
@@ -19,7 +19,7 @@ public interface UserService extends AppService {
      * @param initConfig app数据
      * @return response
      */
-    String userInfoSynchronize(UserInfoSynchronizeRequest body, InitConfig initConfig);
+    String userInfoSynchronize(UserInfoSynchronizeRawBody body, InitConfig initConfig);
 
 
     /**
@@ -29,6 +29,6 @@ public interface UserService extends AppService {
      * @param initConfig app数据
      * @return response
      */
-    String userFollowSynchronize(UserFollowRequest body, InitConfig initConfig);
+    String userFollowSynchronize(UserFollowRawBody body, InitConfig initConfig);
 
 }

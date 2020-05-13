@@ -4,7 +4,7 @@ import cn.zplatform.appapi.app.InitConfig;
 import cn.zplatform.appapi.auth.AppToken;
 import cn.zplatform.appapi.auth.Sign;
 import cn.zplatform.appapi.http.HttpGet;
-import cn.zplatform.appapi.http.RequestBody;
+import cn.zplatform.appapi.http.RawBody;
 import cn.zplatform.appapi.service.AppService;
 import cn.zplatform.appapi.util.Constant;
 import cn.zplatform.appapi.util.RequestTools;
@@ -33,7 +33,7 @@ public abstract class AbstractAppServiceImpl implements AppService {
      * @author Lilac
      * 2020-03-31
      */
-    protected String get(String url, Map<String, String> params, RequestBody body, InitConfig initConfig) {
+    protected String get(String url, Map<String, String> params, RawBody body, InitConfig initConfig) {
 
         log.debug("initConfig.isDisabledDomain() :[{}]", initConfig.isDisabledDomain());
 
@@ -75,7 +75,7 @@ public abstract class AbstractAppServiceImpl implements AppService {
      * @author Lilac
      * 2020-03-31
      */
-    protected String post(String url, Map<String, String> params, RequestBody body, InitConfig initConfig) {
+    protected String post(String url, Map<String, String> params, RawBody body, InitConfig initConfig) {
 
         log.debug("initConfig.isDisabledDomain() :[{}]", initConfig.isDisabledDomain());
         if (initConfig.isDisabledDomain()){

@@ -1,12 +1,11 @@
 package cn.zplatform.appapi.service.impl;
 
 import cn.zplatform.appapi.app.InitConfig;
-import cn.zplatform.appapi.bean.media.article.ArticleSynchronizeRequest;
-import cn.zplatform.appapi.bean.media.article.ArticleUploadRequest;
-import cn.zplatform.appapi.bean.media_statistic.CommentLikeSyncRequest;
-import cn.zplatform.appapi.bean.media_statistic.CommentSyncRequest;
-import cn.zplatform.appapi.bean.media_statistic.MediaFavoriteSyncRequest;
-import cn.zplatform.appapi.bean.media_statistic.MediaLikeSyncRequest;
+import cn.zplatform.appapi.bean.media.article.ArticleSynchronizeRawBody;
+import cn.zplatform.appapi.bean.media.article.ArticleUploadRawBody;
+import cn.zplatform.appapi.bean.media_statistic.*;
+import cn.zplatform.appapi.bean.media_statistic.CommentLikeSyncRawBody;
+import cn.zplatform.appapi.bean.media_statistic.CommentSyncRawv;
 import cn.zplatform.appapi.path.Path;
 import cn.zplatform.appapi.service.MediaService;
 
@@ -19,32 +18,32 @@ import cn.zplatform.appapi.service.MediaService;
 public class MediaServiceImpl extends AbstractAppServiceImpl implements MediaService {
 
     @Override
-    public String mediaLikeSynchronize(MediaLikeSyncRequest body, InitConfig initConfig) {
+    public String mediaLikeSynchronize(MediaLikeSyncRawBody body, InitConfig initConfig) {
         return post(Path.MEDIA_LIKE_SYNCHRONIZE, null, body, initConfig);
     }
 
     @Override
-    public String mediaFavoriteSynchronize(MediaFavoriteSyncRequest body, InitConfig initConfig) {
+    public String mediaFavoriteSynchronize(MediaFavoriteSyncRawBody body, InitConfig initConfig) {
         return post(Path.MEDIA_FAVORITE_SYNCHRONIZE, null, body, initConfig);
     }
 
     @Override
-    public String commentSynchronize(CommentSyncRequest body, InitConfig initConfig) {
+    public String commentSynchronize(CommentSyncRawv body, InitConfig initConfig) {
         return post(Path.COMMENT_SYNCHRONIZE, null, body, initConfig);
     }
 
     @Override
-    public String commentLikeSynchronize(CommentLikeSyncRequest body, InitConfig initConfig) {
+    public String commentLikeSynchronize(CommentLikeSyncRawBody body, InitConfig initConfig) {
         return post(Path.COMMENT_LIKE_SYNCHRONIZE, null, body, initConfig);
     }
 
     @Override
-    public String articleSynchronize(ArticleSynchronizeRequest body, InitConfig initConfig) {
+    public String articleSynchronize(ArticleSynchronizeRawBody body, InitConfig initConfig) {
         return post(Path.ARTICLE_SYNCHRONIZE, null, body, initConfig);
     }
 
     @Override
-    public String uploadArticle(ArticleUploadRequest body, InitConfig initConfig) {
+    public String uploadArticle(ArticleUploadRawBody body, InitConfig initConfig) {
         return post(Path.ARTICLE_UPLOAD_SYNCHRONIZE, null, body, initConfig);
     }
 }

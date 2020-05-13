@@ -1,6 +1,6 @@
 package cn.zplatform.appapi.bean.media.article;
 
-import cn.zplatform.appapi.http.RequestBody;
+import cn.zplatform.appapi.http.RawBody;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,7 +18,7 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @Data
-public class ArticleUploadRequest implements RequestBody {
+public class ArticleUploadRawBody implements RawBody {
 
     List<String > coverIds;
     List<String > galleryIds;

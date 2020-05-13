@@ -1,6 +1,6 @@
 package cn.zplatform.appapi.bean.user;
 
-import cn.zplatform.appapi.http.RequestBody;
+import cn.zplatform.appapi.http.RawBody;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,7 +16,7 @@ import lombok.Data;
 @Builder
 @AllArgsConstructor
 @Data
-public class UserInfoSynchronizeRequest implements RequestBody {
+public class UserInfoSynchronizeRawBody implements RawBody {
 
     private String thirdId;
     private String account;

@@ -1,18 +1,18 @@
 package cn.zplatform.appapi.service.impl;
 
-import cn.zplatform.appapi.bean.transaction.WxAppPostRequest;
+import cn.zplatform.appapi.bean.transaction.WxAppPostRawBody;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 @Slf4j
 class TransactionServiceImplTest {
-    private static WxAppPostRequest payInfo = null;
+    private static WxAppPostRawBody payInfo = null;
 
 
     @BeforeAll
     public static void init() {
-        payInfo = WxAppPostRequest.builder()
+        payInfo = WxAppPostRawBody.builder()
                 .orderId("1111111123113")
                 .body("测试")
                 .totalFee(1)

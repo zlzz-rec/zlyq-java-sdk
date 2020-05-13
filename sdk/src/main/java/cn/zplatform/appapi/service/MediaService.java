@@ -1,12 +1,12 @@
 package cn.zplatform.appapi.service;
 
 import cn.zplatform.appapi.app.InitConfig;
-import cn.zplatform.appapi.bean.media.article.ArticleSynchronizeRequest;
-import cn.zplatform.appapi.bean.media.article.ArticleUploadRequest;
-import cn.zplatform.appapi.bean.media_statistic.CommentLikeSyncRequest;
-import cn.zplatform.appapi.bean.media_statistic.CommentSyncRequest;
-import cn.zplatform.appapi.bean.media_statistic.MediaFavoriteSyncRequest;
-import cn.zplatform.appapi.bean.media_statistic.MediaLikeSyncRequest;
+import cn.zplatform.appapi.bean.media.article.ArticleSynchronizeRawBody;
+import cn.zplatform.appapi.bean.media.article.ArticleUploadRawBody;
+import cn.zplatform.appapi.bean.media_statistic.CommentLikeSyncRawBody;
+import cn.zplatform.appapi.bean.media_statistic.CommentSyncRawv;
+import cn.zplatform.appapi.bean.media_statistic.MediaFavoriteSyncRawBody;
+import cn.zplatform.appapi.bean.media_statistic.MediaLikeSyncRawBody;
 
 /**
  * 媒资数据同步
@@ -22,7 +22,7 @@ public interface MediaService extends AppService {
      * @param initConfig app数据
      * @return response
      */
-    String mediaLikeSynchronize(MediaLikeSyncRequest body, InitConfig initConfig);
+    String mediaLikeSynchronize(MediaLikeSyncRawBody body, InitConfig initConfig);
 
     /**
      *  同步收藏信息
@@ -30,7 +30,7 @@ public interface MediaService extends AppService {
      * @param initConfig app数据
      * @return response
      */
-    String mediaFavoriteSynchronize(MediaFavoriteSyncRequest body, InitConfig initConfig);
+    String mediaFavoriteSynchronize(MediaFavoriteSyncRawBody body, InitConfig initConfig);
 
     /**
      *  同步评论信息
@@ -38,14 +38,14 @@ public interface MediaService extends AppService {
      * @param initConfig app数据
      * @return response
      */
-    String commentSynchronize(CommentSyncRequest body, InitConfig initConfig);
+    String commentSynchronize(CommentSyncRawv body, InitConfig initConfig);
     /**
      *  同步评论点赞信息
      * @param body 请求Body数据
      * @param initConfig app数据
      * @return response
      */
-    String commentLikeSynchronize(CommentLikeSyncRequest body, InitConfig initConfig);
+    String commentLikeSynchronize(CommentLikeSyncRawBody body, InitConfig initConfig);
 
     /**
      *  同步图文信息
@@ -53,7 +53,7 @@ public interface MediaService extends AppService {
      * @param initConfig app数据
      * @return response
      */
-    String articleSynchronize(ArticleSynchronizeRequest body, InitConfig initConfig);
+    String articleSynchronize(ArticleSynchronizeRawBody body, InitConfig initConfig);
 
     /**
      *  上传图文
@@ -61,6 +61,6 @@ public interface MediaService extends AppService {
      * @param initConfig app数据
      * @return response
      */
-    String uploadArticle(ArticleUploadRequest body, InitConfig initConfig);
+    String uploadArticle(ArticleUploadRawBody body, InitConfig initConfig);
 
 }

@@ -1,6 +1,6 @@
-package cn.zplatform.appapi.bean.media.article;
+package cn.zplatform.appapi.bean.media_statistic;
 
-import cn.zplatform.appapi.http.RequestBody;
+import cn.zplatform.appapi.http.RawBody;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,6 +18,6 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @Data
-public class ArticleSynchronizeRequest implements RequestBody {
-    List<ArticleSynchronize> articles;
+public class CommentLikeSyncRawBody implements RawBody {
+    List<CommentLike> commentLikes;
 }

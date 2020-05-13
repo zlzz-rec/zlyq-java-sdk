@@ -1,6 +1,6 @@
 package cn.zplatform.appapi.bean.transaction;
 
-import cn.zplatform.appapi.http.RequestBody;
+import cn.zplatform.appapi.http.RawBody;
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,7 +16,7 @@ import lombok.Data;
 @Builder
 @AllArgsConstructor
 @Data
-public class WxAppPostRequest implements RequestBody{
+public class WxAppPostRawBody implements RawBody {
     @JSONField(name="orderId")
     private String orderId;
     @JSONField(name="body")
