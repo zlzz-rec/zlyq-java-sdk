@@ -6,7 +6,7 @@ import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * 默认 InitConfig 仅供参考
+ * App工厂 初始化配置 仅供参考
  *
  * @author Lilac
  * 2020-03-31
