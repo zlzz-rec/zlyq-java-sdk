@@ -15,6 +15,8 @@ public class TrackServiceImpl extends AbstractAppServiceImpl implements TrackSer
 
     @Override
     public String track(TrackInfo body, InitConfig initConfig) {
-        return post(Path.KEPLER_TRACK + "/" + body.getProject_id(), null, body, initConfig);
+        body.setDebug_mode(initConfig.getDebugMode());
+        body.setProject_id(initConfig.getProjectId());
+        return post(Path.KEPLER_TRACK + "/" + initConfig.getProjectId(), null, body, initConfig);
     }
 }
