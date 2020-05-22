@@ -18,6 +18,8 @@ public class KeplerInitConfig implements InitConfig {
 
     String apiKey;
     String domain;
+    String debugMode;
+    String projectId;
 
     @Override
     public String getAppId() {

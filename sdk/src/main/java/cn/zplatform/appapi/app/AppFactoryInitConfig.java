@@ -27,6 +27,16 @@ public class AppFactoryInitConfig implements InitConfig {
     }
 
     @Override
+    public String getDebugMode() {
+        return null;
+    }
+
+    @Override
+    public String getProjectId() {
+        return null;
+    }
+
+    @Override
     public boolean isEmpty() {
         return StringUtils.isEmpty(appId) || StringUtils.isEmpty(appSecret) || StringUtils.isEmpty(appKey);
     }
