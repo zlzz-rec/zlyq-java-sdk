@@ -43,7 +43,9 @@ class TrackServiceImplTest {
         TrackInfo trackInfo = new TrackInfo(2, track_common, properties );
         System.out.println(JSON.toJSONString(trackInfo));
 
-        new TrackServiceImpl().track(trackInfo, NotSubmit.track);
+        System.out.println(
+                new TrackServiceImpl().track(trackInfo, NotSubmit.kepler)
+        );
 
     }
 }
