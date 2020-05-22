@@ -14,7 +14,7 @@ import org.apache.commons.lang3.StringUtils;
 @Data
 @Builder
 @AllArgsConstructor
-public class DefaultInitConfig implements InitConfig {
+public class AppFactoryInitConfig implements InitConfig {
 
     String appId;
     String appSecret;
