@@ -45,5 +45,7 @@ public class Path {
 
     public static final String KEPLER_TRACK = KEPLER_PREFIX + "/track";
 
+    public static final String KEPLER_PROFILE = KEPLER_PREFIX + "/user_profile";
+
 
 }
