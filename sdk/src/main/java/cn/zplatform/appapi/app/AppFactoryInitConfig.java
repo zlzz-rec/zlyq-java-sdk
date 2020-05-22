@@ -32,7 +32,7 @@ public class AppFactoryInitConfig implements InitConfig {
     }
 
     @Override
-    public String getProjectId() {
+    public Integer getProjectId() {
         return null;
     }
 

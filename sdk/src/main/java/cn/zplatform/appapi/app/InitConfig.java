@@ -44,7 +44,7 @@ public interface InitConfig {
      * 获取debug_mode TODO wiki链接
      * @return debug_mode
      */
-    String getProjectId();
+    Integer getProjectId();
 
     /**
      * 获取Domian
