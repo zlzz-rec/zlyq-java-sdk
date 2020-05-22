@@ -29,6 +29,12 @@ public interface InitConfig {
     String getAppKey();
 
     /**
+     * 获取apiKey TODO wiki链接
+     * @return AppKey
+     */
+    String getApiKey();
+
+    /**
      * 获取Domian
      * @return domain
      */

@@ -6,7 +6,7 @@ import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * App工厂 初始化配置 仅供参考
+ * 开普勒 InitConfig 仅供参考
  *
  * @author Lilac
  * 2020-03-31
@@ -14,21 +14,29 @@ import org.apache.commons.lang3.StringUtils;
 @Data
 @Builder
 @AllArgsConstructor
-public class AppFactoryInitConfig implements InitConfig {
+public class KeplerInitConfig implements InitConfig {
 
-    String appId;
-    String appSecret;
-    String appKey;
+    String apiKey;
     String domain;
 
     @Override
-    public String getApiKey() {
+    public String getAppId() {
+        return null;
+    }
+
+    @Override
+    public String getAppSecret() {
+        return null;
+    }
+
+    @Override
+    public String getAppKey() {
         return null;
     }
 
     @Override
     public boolean isEmpty() {
-        return StringUtils.isEmpty(appId) || StringUtils.isEmpty(appSecret) || StringUtils.isEmpty(appKey);
+        return StringUtils.isEmpty(apiKey);
     }
 
     @Override
