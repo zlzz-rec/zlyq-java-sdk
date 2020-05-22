@@ -18,7 +18,7 @@ public enum DebugMode {
         this.debug_mode = value;
     }
 
-    String value(){
+    public String value(){
         return this.debug_mode;
     }
 }
