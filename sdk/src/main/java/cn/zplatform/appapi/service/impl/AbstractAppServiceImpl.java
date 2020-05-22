@@ -44,7 +44,7 @@ public abstract class AbstractAppServiceImpl implements AppService {
      * @author Lilac
      * 2020-03-31
      */
-    protected String get(String url, Map<String, String> params, RawBody body, InitConfig initConfig) {
+    public String get(String url, Map<String, String> params, RawBody body, InitConfig initConfig) {
 
         log.debug("initConfig.isDisabledDomain() :[{}]", initConfig.isDisabledDomain());
 
@@ -86,7 +86,7 @@ public abstract class AbstractAppServiceImpl implements AppService {
      * @author Lilac
      * 2020-03-31
      */
-    protected String post(String url, Map<String, String> params, RawBody body, InitConfig initConfig) {
+    public String post(String url, Map<String, String> params, RawBody body, InitConfig initConfig) {
 
         log.debug("initConfig.isDisabledDomain() :[{}]", initConfig.isDisabledDomain());
         if (initConfig.isDisabledDomain()) {
