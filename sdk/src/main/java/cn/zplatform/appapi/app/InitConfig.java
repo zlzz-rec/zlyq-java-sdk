@@ -29,6 +29,24 @@ public interface InitConfig {
     String getAppKey();
 
     /**
+     * 获取apiKey TODO wiki链接
+     * @return AppKey
+     */
+    String getApiKey();
+
+    /**
+     * 获取debug_mode TODO wiki链接
+     * @return debug_mode
+     */
+    String getDebugMode();
+
+    /**
+     * 获取debug_mode TODO wiki链接
+     * @return debug_mode
+     */
+    Integer getProjectId();
+
+    /**
      * 获取Domian
      * @return domain
      */

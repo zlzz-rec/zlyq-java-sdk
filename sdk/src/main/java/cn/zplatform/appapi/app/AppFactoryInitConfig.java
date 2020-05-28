@@ -6,7 +6,7 @@ import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * 默认 InitConfig 仅供参考
+ * App工厂 初始化配置 仅供参考
  *
  * @author Lilac
  * 2020-03-31
@@ -14,12 +14,27 @@ import org.apache.commons.lang3.StringUtils;
 @Data
 @Builder
 @AllArgsConstructor
-public class DefaultInitConfig implements InitConfig {
+public class AppFactoryInitConfig implements InitConfig {
 
     String appId;
     String appSecret;
     String appKey;
     String domain;
+
+    @Override
+    public String getApiKey() {
+        return null;
+    }
+
+    @Override
+    public String getDebugMode() {
+        return null;
+    }
+
+    @Override
+    public Integer getProjectId() {
+        return null;
+    }
 
     @Override
     public boolean isEmpty() {

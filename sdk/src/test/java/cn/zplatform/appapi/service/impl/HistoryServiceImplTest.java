@@ -36,6 +36,7 @@ class HistoryServiceImplTest {
                 .properties(properties)
                 .build();
     }
+
     @Test
     void historySynchronize() {
         String response = new HistoryServiceImpl().historySynchronize(trackInfo, NotSubmit.track);

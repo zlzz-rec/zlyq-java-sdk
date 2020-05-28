@@ -20,7 +20,7 @@ maven 导入
 ```java
 package cn.zplatform.appapi.service.impl;
 
-import cn.zplatform.appapi.app.DefaultInitConfig;
+import cn.zplatform.appapi.app.AppFactoryInitConfig;
 import cn.zplatform.appapi.app.InitConfig;
 import cn.zplatform.appapi.bean.user.UserInfoSynchronizeRawBody;
 

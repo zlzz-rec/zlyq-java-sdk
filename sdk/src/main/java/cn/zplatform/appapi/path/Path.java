@@ -38,4 +38,14 @@ public class Path {
     // 评论点赞数据
     public static final String COMMENT_LIKE_SYNCHRONIZE = PREFIX + "/commentLikeSync";
 
+
+    // 下面的是开普勒的接口
+
+    private static final String KEPLER_PREFIX = "/api/v1";
+
+    public static final String KEPLER_TRACK = KEPLER_PREFIX + "/track";
+
+    public static final String KEPLER_PROFILE = KEPLER_PREFIX + "/user_profile";
+
+
 }
