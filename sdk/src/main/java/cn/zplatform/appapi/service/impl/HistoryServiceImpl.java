@@ -14,7 +14,7 @@ import cn.zplatform.appapi.service.HistoryService;
 public class HistoryServiceImpl extends AbstractAppServiceImpl implements HistoryService {
 
     @Override
-    public String historySynchronize(TrackInfo body, InitConfig initConfig) {
-        return post(Path.HISTORY_SYNCHRONIZE, null, body, initConfig);
+    public String trackSynchronize(TrackInfo body, InitConfig initConfig) {
+        return post(Path.TRACK_SYNCHRONIZE, null, body, initConfig);
     }
 }

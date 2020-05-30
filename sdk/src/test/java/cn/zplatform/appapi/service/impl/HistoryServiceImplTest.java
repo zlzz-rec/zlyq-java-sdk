@@ -39,7 +39,7 @@ class HistoryServiceImplTest {
 
     @Test
     void historySynchronize() {
-        String response = new HistoryServiceImpl().historySynchronize(trackInfo, NotSubmit.track);
+        String response = new HistoryServiceImpl().trackSynchronize(trackInfo, NotSubmit.track);
         log.info(response);
     }
 }
