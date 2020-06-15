@@ -18,6 +18,6 @@ public interface HistoryService extends AppService {
      * @param initConfig app数据
      * @return response
      */
-    String historySynchronize(TrackInfo body, InitConfig initConfig);
+    String trackSynchronize(TrackInfo body, InitConfig initConfig);
 
 }

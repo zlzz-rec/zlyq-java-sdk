@@ -15,7 +15,7 @@ public class Path {
     public static final String USER_INFO_SYNCHRONIZE = PREFIX + "synchronize/userInfo";
 
     // 用户历史埋点数据上报
-    public static final String HISTORY_SYNCHRONIZE = "/trace";
+    public static final String TRACK_SYNCHRONIZE = "/trace";
 
 
     // 同步视频
