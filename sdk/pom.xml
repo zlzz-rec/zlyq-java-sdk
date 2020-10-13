@@ -17,7 +17,7 @@
         <commons-logging.version>1.2</commons-logging.version>
         <lombok.version>1.18.2</lombok.version>
         <logback.version>1.1.7</logback.version>
-        <jnuit.version>4.12</jnuit.version>
+        <jnuit.version>4.13.1</jnuit.version>
         <jupiter.version>5.4.0</jupiter.version>
     </properties>
 
