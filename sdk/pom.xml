@@ -12,7 +12,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <httpcomponent.version>4.4.1</httpcomponent.version>
+        <httpcomponent.version>4.5.13</httpcomponent.version>
         <commons-lang3.version>3.8.1</commons-lang3.version>
         <commons-logging.version>1.2</commons-logging.version>
         <lombok.version>1.18.2</lombok.version>
